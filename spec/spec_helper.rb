@@ -19,6 +19,10 @@ end
 Spec::Runner.configure do |config|
   config.before(:each) do
     class Computer < ActiveRecord::Base
+      private
+        def return_false
+          false
+        end
     end
   end
   
